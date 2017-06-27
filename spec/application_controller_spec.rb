@@ -72,4 +72,12 @@ describe ApplicationController do
       expect(last_response.location).to include('/games')
     end
 
+  describe "login" do
+    it 'loads the login page' do
+      get '/login'
+      expect(last_response.status).to eq(200)
+    end
+  end
+
+
 end
