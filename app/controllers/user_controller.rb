@@ -8,4 +8,12 @@ class UserController < ApplicationController
       end
     end
 
+    get '/login' do
+    if logged_in?
+      redirect '/games'
+    else
+      erb :'/users/login'
+    end
+  end
+
 end
