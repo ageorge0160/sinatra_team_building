@@ -107,5 +107,40 @@ describe ApplicationController do
     end
   end
 
+  describe "logout" do
+    it "lets a user logout if they are already logged in" do
+      user = User.create(:username => "walle", :email => "wall@e.com", :password => "eve")
+
+      params = {
+        :username => "walle",
+        :password => "eve"
+      }
+      post '/login', params
+      get '/logout'
+      expect(last_response.location).to include("/login")
+    end
+
+    it 'does not let a user logout if not logged in' do
+      get '/logout'
+      expect(last_response.location).to include("/")
+    end
+
+    it 'does not load /tweets if user not logged in' do
+      get '/tweets'
+      expect(last_response.location).to include("/login")
+    end
+
+    it 'does load /tweets if user is logged in' do
+      user = User.create(:username => "walle", :email => "wall@e.com", :password => "eve")
+
+
+      visit '/login'
+
+      fill_in(:username, :with => "walle")
+      fill_in(:password, :with => "eve")
+      click_button 'submit'
+      expect(page.current_path).to eq('/games')
+    end
+  end
 
 end
