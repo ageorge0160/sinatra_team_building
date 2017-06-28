@@ -27,10 +27,4 @@
 <br>
 <h5><a href="/users/<%=@game.user.slug%>">Added by <%=@game.user.username%></a></h5>
 
-
-<!--Log Out  -->
-<br>
-<form method="post" action="/logout">
-  <input id="hidden" type="hidden" name "_method" value="patch">
-  <input type="submit" value="Log out">
-</form>
+<!-- Link to edit game -->
