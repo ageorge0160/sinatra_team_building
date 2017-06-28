@@ -16,7 +16,7 @@ class GameController < ApplicationController
     end
   end
 
-  get 'games/:id' do
+  get '/games/:id' do
     if logged_in?
       erb :'games/show_game'
     else
@@ -36,7 +36,7 @@ class GameController < ApplicationController
     game = Game.new(params)
     game.user = current_user
     game.save
-    redirect '/games/<%=game.id%>'
+    redirect "/games/#{game.id}"
   end
 
 # Helper Methods
