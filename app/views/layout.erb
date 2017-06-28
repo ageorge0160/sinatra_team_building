@@ -5,6 +5,20 @@
     <title></title>
   </head>
   <body>
+
+    <table>
+      <tr>
+        <th> <button><a href="/games">Home</a></button></th>
+        <th> <button><a href='/games/new'>Create New Game</a></button> <th>
+        <th><form method="post" action="/logout">
+          <input id="hidden" type="hidden" name "_method" value="patch">
+          <input type="submit" value="Log out">
+        </form></th>
+      </tr>
+    </table>
+
+    <br>
+
     <%= yield %>
   </body>
 </html>
