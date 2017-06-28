@@ -3,7 +3,7 @@ class GameController < ApplicationController
 
   get '/games' do
     if logged_in?
-      erb :'games/show_game'
+      erb :'games/games_home'
     else
       redirect ''
     end
