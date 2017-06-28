@@ -9,6 +9,8 @@ class GameController < ApplicationController
     end
   end
 
+
+
 # Helper Methods
   helpers do
     def logged_in?

@@ -1,14 +1,39 @@
 <h1>New Game</h1>
 
 
+<h3>Please include information for all fields</h3>
+<form method='POST' action="/games/new">
+  <label for="title">Game Title:</label><br>
+  <input type="text" name="title" required>
 
+  <br><br>
+  <label for="description">Description:</label><br>
+  <input type="text" name="description" required>
 
+  <br><br>
+  <label for="goal">Goal of Activity:</label><br>
+  <input type="text" name="goal" required>
 
+  <br><br>
+  <label for="rules">Rules:</label><br>
+  <input type="text" name="rules" required>
 
+  <br><br>
+  <label for="safety">Safety Notes:</label><br>
+  <input type="text" name="safety" required>
 
+  <br><br>
+  <label for="debrief_topic">Debrief Topics:</label><br>
+  <input type="text" name="debrief_topic" required>
 
+  <br><br>
+  <label for="time">Time Length:</label><br>
+  <input type="number" name="time" required>
 
+  <br><br>
+  <input type="submit" value="Save">
 
+</form>
 
 
 <!--Log Out  -->
