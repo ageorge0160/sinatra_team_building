@@ -8,7 +8,21 @@ class GameController < ApplicationController
     end
   end
 
-  
+  get '/games/new' do
+    if logged_in?
+      erb :'games/new_game'
+    else
+      redirect ''
+    end
+  end
+
+  get 'games/:id' do
+    if logged_in?
+      erb :'games/show_game'
+    else
+      redirect ''
+    end
+  end
 
   get '/games/:id/edit' do
     if logged_in?
