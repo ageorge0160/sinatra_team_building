@@ -1,1 +1,7 @@
-<h1>User</h1>
+<h1><%=@user.username%></h1>
+
+<h3> Games from <%=@user.username%>
+  <% @user.games.each do |game|%>
+    <a href="/games/<%=game.id%>"><%=game.title%></a>
+  <%end%>
+    

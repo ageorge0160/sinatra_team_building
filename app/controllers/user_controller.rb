@@ -27,7 +27,7 @@ class UserController < ApplicationController
 
   post '/signup' do
     if params["username"] != nil && params["email"] != nil && params["password"] != nil
-      @user = User.create(username: params("username"), email: params("email"), password: params("password"))
+      @user = User.create(params)
       @user.save
       session[:user_id] = @user.id
       redirect '/games'
@@ -45,5 +45,18 @@ class UserController < ApplicationController
       redirect ''
     end
   end
+
+
+    # Helper Methods
+      helpers do
+        def logged_in?
+          !!session[:user_id]
+        end
+
+        def current_user
+          User.find(session[:user_id])
+        end
+      end
+
 
 end
