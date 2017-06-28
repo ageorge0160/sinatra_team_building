@@ -41,20 +41,18 @@ class GameController < ApplicationController
     redirect "/games/#{game.id}"
   end
 
-  patch '/games/:id' do
+  post '/games/:id' do
     game = Game.find(params[:id])
-    if game.user_id = current_user.id
-      game.update(params)
-
-      # game.title = params("title")
-      # game.description = params("description")
-      # game.goal = params("goal")
-      # game.rules = params("rules")
-      # game.safety = params("safety")
-      # game.debrief_topic = params("debrief_topic")
-      # game.time = params("time")
-      # game.save
-      # redirect '/games/<%=game.id%>'
+    if current_user
+      game.title = params["title"]
+      game.description = params["description"]
+      game.goal = params["goal"]
+      game.rules = params["rules"]
+      game.safety = params["safety"]
+      game.debrief_topic = params["debrief_topic"]
+      game.time = params["time"]
+      game.save
+      redirect "/games/#{game.id}"
     else
       erb :'games/games_home'
     end

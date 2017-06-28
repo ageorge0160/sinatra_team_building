@@ -3,8 +3,8 @@
 
 
 <h3>Please include information for all fields</h3>
-<form method='POST' action="/games/<%=@game.id%>">
-  <input id="hidden" type="hidden" name "_method" value="patch">
+<form method='post' action="/games/<%=@game.id%>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
 
   <label for="title">Game Title:</label><br>
   <input type="text" name="title" value="<%=@game.title%>" required>
@@ -37,5 +37,3 @@
   <input type="submit" value="Save">
 
 </form>
-
-<!-- Link to edit game -->
