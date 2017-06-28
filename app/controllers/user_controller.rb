@@ -25,6 +25,15 @@ class UserController < ApplicationController
     end
   end
 
+  get '/users/:slug' do
+    if logged_in?
+      @user = User.find_by_slug(params[:slug])
+      erb :'users/show_user'
+    else
+      redirect ''
+    end
+  end
+
   post '/signup' do
     if params["username"] != nil && params["email"] != nil && params["password"] != nil
       @user = User.create(params)
