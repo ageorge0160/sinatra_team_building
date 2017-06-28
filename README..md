@@ -6,4 +6,8 @@ This site is a way for me to keep a collection of team building activities. As a
 
 ## Games
 
-There are many types of activities we use: ice breakers, initiatives, and debriefs. This site will allow a user to log a new game and see all the games.
+This site keeps games listed from all users and each user. Game views will show the full description of a single game.
+
+## Installation
+
+To use: download/clone the code and run shotgun in command line.

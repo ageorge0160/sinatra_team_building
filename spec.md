@@ -13,13 +13,29 @@ Specs:
 
 - [x] Include user accounts
         -User accounts are created with username, email and password
-- [ ] Ensure that users can't modify content created by other users
-- [ ] Include user input validations
-- [ ] Display validation failures to user with error message (example form URL e.g. /posts/new)
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+
+- [x] Ensure that users can't modify content created by other users
+        -Users can only edit their own games
+
+- [x] Include user input validations
+        -All input fields are required and cannot be submitted when blank
+
+- [x] Display validation failures to user with error message (example form URL e.g. /posts/new)
+        -pop up notifies user of what fields still need input
+
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+        -Readme includes Introduction, purpose and installation use.
+
 
 Confirm
-- [ ] You have a large number of small Git commits
-- [ ] Your commit messages are meaningful
-- [ ] You made the changes in a commit that relate to the commit message
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [x] You have a large number of small Git commits
+        -I tried to commit for each little task I did. Large commits are mostly from creating the initial files.
+
+- [x] Your commit messages are meaningful
+        -Messages are short but give details to remind me what each commit includes
+
+- [x] You made the changes in a commit that relate to the commit message
+        -Most commit messages contain only what happened in the commit... as long as I committed before falling asleep for the night.
+
+- [x] You don't include changes in a commit that aren't related to the commit message
+        -I did my best with it. It does take getting used to committing when we don't use them for every lab.
