@@ -32,6 +32,13 @@ class GameController < ApplicationController
     end
   end
 
+  post '/games/new' do
+    game = Game.new(params)
+    game.user = current_user
+    game.save
+    redirect '/games/<%=game.id%>'
+  end
+
 # Helper Methods
   helpers do
     def logged_in?
