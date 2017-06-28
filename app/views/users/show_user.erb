@@ -4,4 +4,11 @@
   <% @user.games.each do |game|%>
     <a href="/games/<%=game.id%>"><%=game.title%></a>
   <%end%>
-    
+
+
+  <!--Log Out  -->
+  <br>
+  <form method="post" action="/logout">
+    <input id="hidden" type="hidden" name "_method" value="patch">
+    <input type="submit" value="Log out">
+  </form>
