@@ -1,6 +1,5 @@
 class GameController < ApplicationController
 
-
   get '/games' do
     if logged_in?
       erb :'games/games_home'
@@ -9,7 +8,15 @@ class GameController < ApplicationController
     end
   end
 
+  
 
+  get '/games/:id/edit' do
+    if logged_in?
+      erb :'games/edit_game'
+    else
+      redirect ''
+    end
+  end
 
 # Helper Methods
   helpers do
@@ -21,6 +28,4 @@ class GameController < ApplicationController
       User.find(session[:user_id])
     end
   end
-
-
 end

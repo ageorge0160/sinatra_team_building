@@ -1,4 +1,42 @@
-<h1>Edit Game</h1>
+<h1>Edit <%=@game.title%></h1>
+
+
+
+<h3>Please include information for all fields</h3>
+<form method='POST' action="/games/<%=@game.id%>">
+  <input id="hidden" type="hidden" name "_method" value="patch">
+
+  <label for="title">Game Title:</label><br>
+  <input type="text" name="title" value="<%=@game.title%>" required>
+
+  <br><br>
+  <label for="description">Description:</label><br>
+  <input type="text" name="description" value="<%=@game.description%>" required>
+
+  <br><br>
+  <label for="goal">Goal of Activity:</label><br>
+  <input type="text" name="goal" value="<%=@game.goal%>" required>
+
+  <br><br>
+  <label for="rules">Rules:</label><br>
+  <input type="text" name="rules" value="<%=@game.rules%>" required>
+
+  <br><br>
+  <label for="safety">Safety Notes:</label><br>
+  <input type="text" name="safety" value="<%=@game.safety%>" required>
+
+  <br><br>
+  <label for="debrief_topic">Debrief Topics:</label><br>
+  <input type="text" name="debrief_topic" value="<%=@game.debrief_topic%>" required>
+
+  <br><br>
+  <label for="time">Time Length:</label><br>
+  <input type="number" name="time" value="<%=@game.time%>" required>
+
+  <br><br>
+  <input type="submit" value="Save">
+
+</form>
 
 
 
