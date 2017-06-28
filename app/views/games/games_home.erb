@@ -1,14 +1,16 @@
 <h1>Team Building Games</h1>
 
+<!-- New Game Link  -->
+<a href='/games/new'>Create New Game</a>
+<br><br>
 
-
-
-
-
-
-
-
-
+<!-- Game List -->
+<ul>
+<%Game.all.each do |game| %>
+  <li><a href='/games/<%=game.id%>'><%=game.title%>: <%=game.description%></a></li>
+<% end %>
+</ul>
+<br><br>
 
 <!--Log Out  -->
 <br>
