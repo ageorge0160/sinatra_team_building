@@ -1,6 +1,5 @@
 <h1><%=@game.title%></h1>
 
-<br>
 <h2>Description:</h2>
 <p><%=@game.description%></p>
 
@@ -25,7 +24,7 @@
 <p><%=@game.time%></p>
 
 <br>
-<h5><a href="/users/<%=@game.user.slug%>">Added by <%=@game.user.username%></a></h5>
+<h4><a href="/users/<%=@game.user.slug%>">Added by <%=@game.user.username%></a></h4>
 
 <!-- Link to edit game -->
 <button><a href="/games/<%=@game.id%>/edit">Edit Game</a></button>
