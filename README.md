@@ -10,4 +10,6 @@ This site keeps games listed from all users and each user. Game views will show 
 
 ## Installation
 
-To use: download/clone the code and run shotgun in command line.
+Fork and clone the repository. Run `bundle install` and `rackup`.
+
+To use app, create a username and log in. Begin adding activities.
